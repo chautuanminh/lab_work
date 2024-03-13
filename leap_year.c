@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main () {
     int year;
-    printf("what is the year you're refering to: ");
-    scanf("%d", &year);
-    if (year<0) {
-        printf("This year is invalid re-enter it.");
-        
-    }
+    do {
+        printf("Enter a year: ");
+        scanf("%d", &year);
+
+        if (year < 0) {
+            printf("Invalid year. Please re-enter.\n");
+        }
+    } while (year < 0);
     if (year %4 == 0 && year %100 !=0){
             printf("%d is a leap year", year);
         } else if (year %400==0) {
