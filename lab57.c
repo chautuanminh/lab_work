@@ -6,6 +6,7 @@ int main() {
     char A[1000];
     printf("what's your magic phrase: ");
     fgets(A, sizeof(A), stdin);
+    A[strcspn(A, "\n")] = 0;//delete newline char
     for(i = 0; i < strlen(A);i++) {
         if (A[i] == 'a') {
             count += 1;
