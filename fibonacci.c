@@ -2,7 +2,7 @@
 
 int main () {
     int i, n ,A[1000];
-    A[0] = 1;
+    A[0] = 0;
     A[1] = 1;
     printf("how many number of the fibonacci sequence: " );
     scanf("%d",&n);
