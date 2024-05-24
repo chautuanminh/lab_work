@@ -1,23 +1,23 @@
-#include <stdio.h> 
-unsigned long long fac(int x) {
-
-    if (x <= 0) {
-        return 1;
-    } 
-        return x *= fac(x-1);
-    
-}
-int main () {
-    int x, res;
-    printf("what is your number");
-    scanf("%d",&x);
-    if (x <= 0) {
-        printf("invalid num, pls re-enter:");
+#include <stdio.h>
+int fac(int n) {
+    int x;
+        if(n==0) {
         return 1;
     } else {
-         res = fac(x) ;
-
+        x= n*fac(n-1);
     }
-    printf("%d",res);
+    return x;
+}
+int main () {
+    int n;
+    printf("what is your num: ");
+    scanf("%d", &n);
+    while (n<=0) {
+    printf("what is your num: ");
+    scanf("%d", &n);
+    }
+    int x = fac(n);
+    printf("%d", x);
     return 0;
+    
 }
