@@ -1,18 +1,21 @@
 #include <stdio.h>
-#include <math.h> 
-int main () {
-    int n, sum;
-    int t1 = 0;
-    int t2 = 1;
-    printf("What is your number N:\n");
-    scanf("%d", &n);
-printf ("%d , %d\n", t1 ,t2);
-    for (int i = 1; i <= n-2; i++) {
 
-        sum = t1 +t2;
-        t1 = t2;
-        t2 = sum;
-        printf("%d\n", sum);
+int main () {
+    int i, n ,A[1000];
+    A[0] = 1;
+    A[1] = 1;
+    printf("how many number of the fibonacci sequence: " );
+    scanf("%d",&n);
+    if (n<= 0) {
+        printf("error please re-enter: ");
+        scanf("%d", &n);
+    }
+    for (i = 0;i<n;i++) {
+           A[i+2] = A[i+1] + A[i];
+    }
+    for (i = 0; i< n; i++) {
+        printf("%d\n", A[i]);
     }
     return 0;
+    
 }
