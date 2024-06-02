@@ -7,7 +7,7 @@ int main () {
     printf("how many number do you want: ");
     scanf("%d", &n);
     for (i = 0; i < n; i++) {
-        printf("what is your %d number", i+1) ;
+        printf("what is your %d number: ", i+1) ;
         scanf("%d", &A[i]);
     }
     k=0;
@@ -16,8 +16,8 @@ int main () {
             B[k++] = A[i];
         }
 }
-    for (i = 0; i<k+1; i++) {
-        printf("%d", B[i]);
+    for (i = 0; i<k; i++) {
+        printf("%d\n", B[i]);
     }
     return 0;
    
