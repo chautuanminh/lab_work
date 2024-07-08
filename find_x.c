@@ -2,7 +2,8 @@
 #include <string.h> 
 
 int main () {
-    int i, k;
+    int i, k, c;
+    c = 0;
     k = 0;
     char A[200], B[200], x;
 
@@ -16,9 +17,10 @@ int main () {
         if(A[i] == x) {
             B[k++] = A[i];
             printf("The letter 'x' is in position %d\n", i+1);
+            c++;
         }
     }
 
-    printf("the number of the letter 'x entered is %d", strlen(B));
+    printf("the number of the letter 'x entered is %d", c);
     return 0;
 }
